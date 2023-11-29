@@ -1,0 +1,45 @@
+footer.ddt-footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    padding: 20px;
+
+    width: 100%;
+    background-color: rgb(245,245,245);
+}
+
+div.ddt-f-head h1 {
+    text-align: center;
+    margin: 0 0 10px 0;
+    font-size: 24px;
+}
+
+div.ddt-f-head span {
+    font-size: 16px;
+}
+
+div.ddt-f-body {
+    display: flex;
+    justify-content: space-between;
+    width: 800px;
+}
+
+div.ddt-f-body-left,
+div.ddt-f-body-right {
+    width: 250px;
+}
+
+div.ddt-f-body-left {
+    display: flex;
+    flex-direction: column;
+}
+
+div.ddt-f-body-right {
+}
+
+div.ddt-f-foot {
+    margin-top: 30px;
+
+}
