@@ -1,7 +1,8 @@
+import SignInSection from "containers/SignInSection";
 
 function SignInPage() {
     return (
-        <>Sign in</>
+        <SignInSection/>
     );
 }
 

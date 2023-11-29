@@ -1,6 +1,11 @@
+import React from 'react'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import {
+  QueryClient,
+  QueryClientProvider,
+} from '@tanstack/react-query'
 import PageFooter from 'containers/PageFooter'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -15,11 +20,15 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const [queryClient] = React.useState(() => new QueryClient())
+
   return (
     <html lang="ko">
       <body className={inter.className}>
-        {children}
-        <PageFooter />
+        <QueryClientProvider client={queryClient}>
+          {children}
+          <PageFooter />
+        </QueryClientProvider>
       </body>
     </html>
   )

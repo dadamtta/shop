@@ -8,8 +8,11 @@ const nextConfig = {
             },
         ];
     },
-    compiler: {
-        styledComponents: true,
+    reactStrictMode: true,
+    modularizeImports: {
+        '@mui/icons-material': {
+          transform: '@mui/icons-material/{{member}}',
+        },
     },
 }
 
