@@ -1,33 +1,45 @@
 "use client"
 
 import { TextField, Button } from "@mui/material"
-import { useMutation } from "@tanstack/react-query"
+import { authApi } from "apis/authApi"
 import { userApi } from "apis/userApi"
+import { memo, useEffect, useState } from "react"
 import { Controller, useForm } from "react-hook-form"
+import { encryptBase64EncodedData } from "utils/rsa"
 
 interface SignInInputs {
     userId: string
     userPwd: string
 }
 
-function SignInSection() {
+interface Props {
+}
 
+function SignInSection({
+}: Props) {
+
+    const [publicKey, setPublicKey] = useState<string>('')
+    // TODO 데이터 입력 확인 validation check
     const { control, handleSubmit } = useForm<SignInInputs>({
         defaultValues: {
             userId: "",
             userPwd: "",
         },
     })
-    const signInMutation = useMutation({
-        mutationFn: userApi.postSignIn,
-        onSuccess: () => alert("로그인 성공"),
-        onError: () => alert("로그인 실패"),
-    })
+
+    useEffect(() => {
+        authApi.getBase64EncodedPublicKeyPem().then(response => {
+            setPublicKey(response.data.base64EncodedPublicKeyPem)
+        })
+    }, [])
 
     const postSignIn = (inputs: SignInInputs) => {
-        console.log(inputs)
-        
-        signInMutation.mutate(inputs)
+        const encryptedInputs = encryptBase64EncodedData(publicKey, JSON.stringify({
+            id: inputs.userId,
+            pwd: inputs.userPwd,
+        }))
+        // todo error handle
+        userApi.postSignIn(encryptedInputs)
     }
 
     return (
@@ -61,4 +73,4 @@ function SignInSection() {
     )
 }
 
-export default SignInSection
+export default memo(SignInSection)

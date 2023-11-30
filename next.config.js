@@ -8,10 +8,10 @@ const nextConfig = {
             },
         ];
     },
-    reactStrictMode: true,
+    reactStrictMode: false,
     modularizeImports: {
         '@mui/icons-material': {
-          transform: '@mui/icons-material/{{member}}',
+            transform: '@mui/icons-material/{{member}}',
         },
     },
 }

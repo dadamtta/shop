@@ -1,9 +1,13 @@
 import SignInSection from "containers/SignInSection";
-
-function SignInPage() {
+/**
+ * SSR에서 RSA 키 획득
+*/
+async function SignInPage() {
     return (
-        <SignInSection/>
-    );
+        <SignInSection
+            
+        />
+    )
 }
 
 export default SignInPage;
