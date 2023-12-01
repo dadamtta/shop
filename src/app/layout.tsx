@@ -3,6 +3,7 @@ import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import PageFooter from 'containers/PageFooter'
+import TitleHeader from 'containers/TitleHeader'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,6 +20,7 @@ export default function RootLayout({
   return (
     <html lang="ko">
       <body className={inter.className}>
+        <TitleHeader />
         {children}
         <PageFooter />
       </body>

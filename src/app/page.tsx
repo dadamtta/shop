@@ -1,6 +1,7 @@
+import HomeMain from "containers/HomeMain";
+
 export default function Home() {
   return (
-    <main>
-    </main>
+    <HomeMain/>
   )
 }

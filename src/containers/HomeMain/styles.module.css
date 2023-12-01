@@ -1,0 +1,71 @@
+main.main {
+    height: fit-content;
+    flex-direction: column;
+}
+
+main.main,
+section.main-introduce,
+section.main-help,
+section.main-features,
+section.main-guide,
+section.main-review {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+div.main-inner-width {
+    max-width: 1200px;
+    width: 100%;
+}
+
+div.main-i-content {
+    display: flex;
+    align-items: center;
+
+    width: 100%;
+    height: 100%;
+}
+
+div.main-i-content > div:nth-child(1) {
+    width: 40%;
+}
+
+div.main-i-content > div:nth-child(2) {
+    width: 60%;
+}
+
+/* 임시 height */
+section.main-introduce {
+    max-height: 800px;
+    min-height: 800px;
+    height: 800px;
+}
+
+/* 임시 height */
+section.main-help {
+    max-height: 500px;
+    min-height: 500px;
+    height: 500px;
+}
+
+/* 임시 height */
+section.main-features {
+    max-height: 700px;
+    min-height: 700px;
+    height: 700px;
+}
+
+/* 임시 height */
+section.main-guide {
+    max-height: 400px;
+    min-height: 400px;
+    height: 400px;
+}
+
+/* 임시 height */
+section.main-review {
+    max-height: 400px;
+    min-height: 400px;
+    height: 400px;
+}

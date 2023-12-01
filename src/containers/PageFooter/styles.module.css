@@ -1,45 +1,33 @@
-footer.ddt-footer {
+footer.footer {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 
-    padding: 20px;
+    padding: 30px;
 
     width: 100%;
+    min-width: 300px;
     background-color: rgb(245,245,245);
 }
 
-div.ddt-f-head h1 {
+div.footer-head h1 {
     text-align: center;
     margin: 0 0 10px 0;
-    font-size: 24px;
+    font-size: 18px;
 }
 
-div.ddt-f-head span {
-    font-size: 16px;
+div.footer-head span {
+    font-size: 14px;
 }
 
-div.ddt-f-body {
+div.footer-body {
     display: flex;
     justify-content: space-between;
     width: 800px;
 }
 
-div.ddt-f-body-left,
-div.ddt-f-body-right {
-    width: 250px;
-}
-
-div.ddt-f-body-left {
-    display: flex;
-    flex-direction: column;
-}
-
-div.ddt-f-body-right {
-}
-
-div.ddt-f-foot {
+div.footer-foot {
     margin-top: 30px;
-
+    font-size: 12px;
 }
