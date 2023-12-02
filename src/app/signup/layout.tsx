@@ -11,10 +11,8 @@ export default function SignUpPageLayout({
     children: React.ReactNode
 }) {
     return (
-        <section>
-            <h1 className="underline">SIGN UP</h1>
-            <nav></nav>
+        <>
             {children}
-        </section>
+        </>
     )
 }

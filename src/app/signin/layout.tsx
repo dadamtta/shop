@@ -11,10 +11,8 @@ export default function SignInPageLayout({
     children: React.ReactNode
 }) {
     return (
-        <section>
-            <h1 className="underline">SIGN IN</h1>
-            <nav></nav>
+        <>
             {children}
-        </section>
+        </>
     )
 }

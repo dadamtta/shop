@@ -1,0 +1,21 @@
+section.sect-signup {
+    display: flex;
+    justify-content: center;
+    min-height: 100vh;
+    width: 100%;
+
+    background-color: white;
+}
+
+div.sect-signup-inner {
+    max-width: 1200px;
+}
+
+div.input-with-label {
+    display: flex;
+    align-items: center;
+}
+
+div.input-with-label h5 {
+    width: 100px;
+}
