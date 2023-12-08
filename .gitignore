@@ -1,9 +1,11 @@
 /src/app/wedding/day/*
+/src/app/wedding/_components
 /src/app/wedding/_containers
 /src/app/wedding/_pages
 /src/app/wedding/_utils
 /src/app/wedding/page.tsx
 /src/app/wedding/.git
+/src/app/wedding/.gitignore
 package-lock.json
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
