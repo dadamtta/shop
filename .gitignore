@@ -1,13 +1,13 @@
-/src/app/wedding/day/*
-/src/app/wedding/_components
-/src/app/wedding/_containers
-/src/app/wedding/_pages
-/src/app/wedding/_utils
-/src/app/wedding/page.tsx
-/src/app/wedding/.git
-/src/app/wedding/.gitignore
+/src/app/(card)/wedding/day/*
+/src/app/(card)/wedding/_components
+/src/app/(card)/wedding/_containers
+/src/app/(card)/wedding/_pages
+/src/app/(card)/wedding/_utils
+/src/app/(card)/wedding/page.tsx
+/src/app/(card)/wedding/.git
+/src/app/(card)/wedding/.gitignore
 
-/src/app/baby/rang
+/src/app/(card)/baby/rang
 package-lock.json
 
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
